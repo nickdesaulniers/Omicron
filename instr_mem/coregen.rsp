@@ -1,0 +1,3 @@
+NEWPROJECT "X:/DSD/memory/inst_mem/ipcore_dir/coregen.cgp"
+SETPROJECT "X:/DSD/memory/inst_mem/ipcore_dir/coregen.cgp"
+LAUNCHXCO "X:/DSD/memory/inst_mem/ipcore_dir/inst_mem.xco"

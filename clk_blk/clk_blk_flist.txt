@@ -1,0 +1,4 @@
+# Output products list for <clk_blk>
+clk_blk_flist.txt
+clk_blk_readme.txt
+clk_blk_xmdf.tcl

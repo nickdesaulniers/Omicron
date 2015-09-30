@@ -1,0 +1,228 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 320 176)
+	(text "control_unit" (rect 5 0 89 12)(font "Arial" ))
+	(text "inst" (rect 8 144 36 156)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 21 12)(font "Arial" ))
+		(text "clk" (rect 21 27 42 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rst_n" (rect 0 0 35 12)(font "Arial" ))
+		(text "rst_n" (rect 21 43 56 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "id_opcode[3..0]" (rect 0 0 106 12)(font "Arial" ))
+		(text "id_opcode[3..0]" (rect 21 59 127 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 304 32)
+		(output)
+		(text "cu_reg_load" (rect 0 0 77 12)(font "Arial" ))
+		(text "cu_reg_load" (rect 206 27 283 39)(font "Arial" ))
+		(line (pt 304 32)(pt 288 32)(line_width 1))
+	)
+	(port
+		(pt 304 48)
+		(output)
+		(text "cu_alu_sel_b" (rect 0 0 84 12)(font "Arial" ))
+		(text "cu_alu_sel_b" (rect 199 43 283 55)(font "Arial" ))
+		(line (pt 304 48)(pt 288 48)(line_width 1))
+	)
+	(port
+		(pt 304 64)
+		(output)
+		(text "cu_alu_opcode[10..0]" (rect 0 0 141 12)(font "Arial" ))
+		(text "cu_alu_opcode[10..0]" (rect 142 59 283 71)(font "Arial" ))
+		(line (pt 304 64)(pt 288 64)(line_width 3))
+	)
+	(port
+		(pt 304 80)
+		(output)
+		(text "cu_dm_wea" (rect 0 0 63 12)(font "Arial" ))
+		(text "cu_dm_wea" (rect 220 75 283 87)(font "Arial" ))
+		(line (pt 304 80)(pt 288 80)(line_width 1))
+	)
+	(port
+		(pt 304 96)
+		(output)
+		(text "cu_reg_data_loc" (rect 0 0 106 12)(font "Arial" ))
+		(text "cu_reg_data_loc" (rect 177 91 283 103)(font "Arial" ))
+		(line (pt 304 96)(pt 288 96)(line_width 1))
+	)
+	(port
+		(pt 304 112)
+		(output)
+		(text "cu_branch[1..0]" (rect 0 0 106 12)(font "Arial" ))
+		(text "cu_branch[1..0]" (rect 177 107 283 119)(font "Arial" ))
+		(line (pt 304 112)(pt 288 112)(line_width 3))
+	)
+	(parameter
+		"NOOP_i"
+		"0000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"CPY_i"
+		"0001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ADD_i"
+		"0010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SUB_i"
+		"0011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"MUL_i"
+		"0100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AND_i"
+		"0101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"OR_i"
+		"0110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"NOT_i"
+		"0111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"XOR_i"
+		"1000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LS_i"
+		"1001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"RS_i"
+		"1010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"BEQ_i"
+		"1011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"BNE_i"
+		"1100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LD_i"
+		"1101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"STR_i"
+		"1110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"JMP_i"
+		"1111"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"NOOP"
+		"00000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"CPY"
+		"00000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ADD"
+		"00000000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SUB"
+		"00000001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"MUL"
+		"00000010000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AND"
+		"00000100000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"OR"
+		"00001000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"NOT"
+		"00010000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"XOR"
+		"00100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LS"
+		"01000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"RS"
+		"10000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 288 144)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 320 -64 420 16))
+)

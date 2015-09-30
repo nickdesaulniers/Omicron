@@ -1,0 +1,46 @@
+force clk_n 0 0, 1 50ns -repeat 100ns
+
+force if_next_addr 0000000 0
+force if_curr_inst 0000000000000000 0
+force wb_reg_wea 0 0
+force wb_reg_wdata 0000000000000000 0
+force wb_reg_waddr 000 0
+
+
+force wb_reg_wea 1 50ns
+force wb_reg_waddr 000 50ns
+force wb_reg_wdata 0000000000000000 50ns
+
+force wb_reg_waddr 001 150ns
+force wb_reg_wdata 0000000000000001 150ns
+
+force wb_reg_waddr 010 250ns
+force wb_reg_wdata 0000000000000010 250ns
+
+force wb_reg_waddr 011 350ns
+force wb_reg_wdata 0000000000000011 350ns
+
+force wb_reg_waddr 100 450ns
+force wb_reg_wdata 0000000000000100 450ns
+
+force wb_reg_waddr 101 550ns
+force wb_reg_wdata 0000000000000101 550ns
+
+force wb_reg_waddr 110 650ns
+force wb_reg_wdata 0000000000000110 650ns
+
+force wb_reg_waddr 111 750ns
+force wb_reg_wdata 0000000000000111 750ns
+
+force wb_reg_wea 0 850ns
+force if_curr_inst 0001000001000000 850ns
+
+force if_curr_inst 0001010011000000 950ns
+
+force if_curr_inst 0001100101000000 1050ns
+
+force if_curr_inst 0001110111000000 1150ns
+
+force if_next_addr 0000111 1250ns
+
+run 1500ns

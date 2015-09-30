@@ -1,0 +1,154 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 232 144)
+	(text "alu" (rect 5 0 26 12)(font "Arial" ))
+	(text "inst" (rect 8 112 36 124)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "a[15..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "a[15..0]" (rect 21 27 77 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "b[15..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "b[15..0]" (rect 21 43 77 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "opcode[10..0]" (rect 0 0 92 12)(font "Arial" ))
+		(text "opcode[10..0]" (rect 21 59 113 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "rst_n" (rect 0 0 35 12)(font "Arial" ))
+		(text "rst_n" (rect 21 75 56 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "clk_n" (rect 0 0 35 12)(font "Arial" ))
+		(text "clk_n" (rect 21 91 56 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 216 32)
+		(output)
+		(text "out[15..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "out[15..0]" (rect 125 27 195 39)(font "Arial" ))
+		(line (pt 216 32)(pt 200 32)(line_width 3))
+	)
+	(port
+		(pt 216 48)
+		(output)
+		(text "z" (rect 0 0 7 12)(font "Arial" ))
+		(text "z" (rect 188 43 195 55)(font "Arial" ))
+		(line (pt 216 48)(pt 200 48)(line_width 1))
+	)
+	(parameter
+		"NOOP"
+		"00000000001"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"CPY"
+		"00000000010"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ADD"
+		"00000000100"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"SUB"
+		"00000001000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"MUL"
+		"00000010000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"AND"
+		"00000100000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"OR"
+		"00001000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"NOT"
+		"00010000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"XOR"
+		"00100000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"LS"
+		"01000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"RS"
+		"10000000000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"ZERO"
+		"11111111000"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"NOR"
+		"11111111110"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"XNOR"
+		"11111111101"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(parameter
+		"NAND"
+		"11111111011"
+		""
+		(type "PARAMETER_UNSIGNED_BIN")	)
+	(drawing
+		(rectangle (rect 16 16 200 112)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 232 -64 332 16))
+)

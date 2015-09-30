@@ -1,0 +1,15 @@
+# ==== Clock Source ====
+NET "clk_in" LOC = "C9" | IOSTANDARD = LVCMOS33;
+NET "clk_in" PERIOD = 5ns HIGH 40%;
+NET "clk_in" CLOCK_DEDICATED_ROUTE = FALSE;	
+# ==== Discrete LEDs (LED) ====
+NET "leds<0>" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "leds<1>" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "leds<2>" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "leds<3>" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "leds<4>" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "leds<5>" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "leds<6>" LOC = "E9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+NET "leds<7>" LOC = "F9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+# ==== Slide Switches (SW) ====
+NET "rst_n" LOC = "L13" | IOSTANDARD = LVTTL | PULLUP ; # SW

@@ -1,0 +1,56 @@
+force clk_n 1 0, 0 10ns -repeat 20ns
+force rst_n 0 0, 1 10ns
+
+force id_next_addr 0101 0
+force id_sign_ext_addr 00010 0
+
+force cu_reg_dest 0 0
+
+force cu_alu_opcode 1 0
+force cu_alu_sel_b 0 0
+force id_register1_addr 100 0
+force id_register2_addr 111 0
+force id_register1_data 11110101 0
+force id_register2_data 11111010 0
+
+# NOOP
+force cu_alu_opcode 1 30ns
+
+#CPY
+force cu_alu_opcode 10 50ns
+
+#ADD
+force cu_alu_opcode 100 70ns
+
+#SUB
+force cu_alu_opcode 1000 90ns
+
+#MUL
+force cu_alu_opcode 10000 110ns
+
+#AND
+force cu_alu_opcode 100000 130ns
+
+#OR
+force cu_alu_opcode 1000000 150ns
+
+#NOT
+force cu_alu_opcode 10000000 170ns
+
+#XOR
+force cu_alu_opcode 100000000 190ns
+
+#Change b select line
+force cu_alu_sel_b 1 205ns
+
+#LS
+force cu_alu_opcode 1000000000 210ns
+
+#RS
+force cu_alu_opcode 10000000000 230ns
+
+#Change dest
+force cu_reg_dest 1 240ns
+
+run 400ns
+

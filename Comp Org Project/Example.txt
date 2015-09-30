@@ -1,0 +1,13 @@
+Nick Desaulniers
+Cody Cziesler
+Project Example Code
+5/4/10
+
+	This code runs through an array and adds all of the integers together and keeps a running sum.  The starting address of the array is saved in register $A, the size of the array is stored in $G, and saves the result in $C.
+
+add $0 $0 $C		// $C <-- 0
+loop:
+lw  $A $B			// $B <-- M[$A]
+add $B $C $C		// $C <-- $C + $B
+add 1  $A $A		// $A <-- $A + 1
+bne $A $G loop		// if( $A == $G ) goto loop

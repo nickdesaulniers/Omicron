@@ -1,0 +1,11 @@
+force m_alu_result 0000000011110000 0
+force m_dm_dout    0000000011111111 0
+
+force m_reg_waddr  000001 0
+force cu_reg_data_loc 0 0
+force cu_reg_load 0 0
+
+
+force cu_reg_data_loc 1 100ns
+
+force cu_reg_load 1 200ns
